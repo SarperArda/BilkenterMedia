@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "904380162990",
+    "project_id": "bilkentermedia-158c1",
+    "storage_bucket": "bilkentermedia-158c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904380162990:android:a78b498bc70cf33b6b9e3f",
+        "android_client_info": {
+          "package_name": "com.thenameless.bilkenter_media"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904380162990-fu77ptln0pog86eehctti7on7ct46jro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0pMlG8xfquNmkmegCnWVgpY7xKbBrH0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904380162990-fu77ptln0pog86eehctti7on7ct46jro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
