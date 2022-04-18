@@ -29,4 +29,14 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void goToProfile(View view){
+        Intent intent = new Intent(Home.this,Profile.class);
+        startActivity(intent);
+        finish();
+    }
+    public void goToBlog(View view){
+        Intent intent = new Intent(Home.this,Blog.class);
+        startActivity(intent);
+        finish();
+    }
 }

@@ -30,4 +30,25 @@
         app:layout_constraintBottom_toTopOf="@+id/places"
         app:layout_constraintEnd_toEndOf="@+id/places"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:onClick="goToProfile"
+        android:text="profile"
+        app:layout_constraintBottom_toTopOf="@+id/blog"
+        app:layout_constraintStart_toStartOf="@+id/blog" />
+
+    <Button
+        android:id="@+id/blog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:onClick="goToBlog"
+        android:text="Blog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
