@@ -1,1 +1,3 @@
 # BilkenterMedia
+This is android app developed for group project CS 102, Bilkent University.
+Our main aim is to introduce newcomers to Bilkent and also help Bilkenters to explore new places around our university. In order to do that we will put as much as places around Bilkent in order to be fair and adequate. Every place will have a page that includes location, rating and comments. Every Bilkenter can comment and rate for the places they have been to. By doing so, other users can see sufficient information about the cafes, parks, buildings, shopping centers, dormitories, and others. Our app is different from other social media apps because we combine Foursquare, Google Maps, Twitter, and YemekSepeti for the project.
