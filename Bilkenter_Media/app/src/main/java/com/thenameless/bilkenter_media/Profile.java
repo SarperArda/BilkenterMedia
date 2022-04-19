@@ -2,6 +2,7 @@ package com.thenameless.bilkenter_media;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -16,5 +17,11 @@ public class Profile extends AppCompatActivity {
         binding = ActivityProfileBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+    }
+
+    public void goToSetting(View view){
+        Intent intent = new Intent(Profile.this,Settings.class);
+        startActivity(intent);
+        finish();
     }
 }
