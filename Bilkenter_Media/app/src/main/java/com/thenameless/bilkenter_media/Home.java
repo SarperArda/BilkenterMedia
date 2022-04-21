@@ -39,4 +39,9 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void goToInfo(View view){
+        Intent intent = new Intent(Home.this,Info.class);
+        startActivity(intent);
+        finish();
+    }
 }
