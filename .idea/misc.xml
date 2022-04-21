@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_info.xml" value="0.25416666666666665" />
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_maps.xml" value="0.25416666666666665" />
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_places.xml" value="0.25416666666666665" />
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_settings.xml" value="0.25416666666666665" />
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/recycler_helper.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android API 32 Platform" project-jdk-type="Android SDK" />
+</project>
