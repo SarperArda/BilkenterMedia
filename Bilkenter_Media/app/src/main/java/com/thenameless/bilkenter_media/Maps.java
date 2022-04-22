@@ -1,5 +1,8 @@
 package com.thenameless.bilkenter_media;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -14,6 +17,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -28,6 +32,9 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
+    ActivityResultLauncher<String> permissionLauncher;
+    LocationManager user;
+    LocationListener locationListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +47,7 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        registerLaunch();
     }
 
     /**
@@ -51,16 +59,16 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
-    //Not completed
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         mMap = googleMap;
-        LocationManager user = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-        LocationListener locationListener = new LocationListener() {
+        user = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+        locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(@NonNull Location location) {
-                //Not completed
-                //location.
+                LatLng userCurrent = new LatLng(location.getLatitude(),location.getLongitude());
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userCurrent,18));
             }
         };
         //Request Location from user
@@ -69,16 +77,35 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
                 Snackbar.make(binding.getRoot(),"Location Permision is Needed!",Snackbar.LENGTH_INDEFINITE).setAction("Give Permission for Maps", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
+                        permissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
                     }
                 });
             }else{
-
+                permissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
             }
         }else{
             user.requestLocationUpdates(LocationManager.GPS_PROVIDER,10000,50,locationListener);
         }
 
-
     }
+
+    public void registerLaunch(){
+        permissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), new ActivityResultCallback<Boolean>() {
+            @Override
+            public void onActivityResult(Boolean result) {
+                if(result){
+                    if(ContextCompat.checkSelfPermission(Maps.this,Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+                        user.requestLocationUpdates(LocationManager.GPS_PROVIDER,10000,50,locationListener);
+                    }
+
+                }
+                else{
+                    Toast.makeText(Maps.this, "Location Permision is Needed!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    
+
 }
