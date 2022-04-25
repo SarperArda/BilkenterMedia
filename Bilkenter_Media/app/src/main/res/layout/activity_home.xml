@@ -5,35 +5,8 @@
     android:id="@+id/info"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="goToPlaces"
     tools:context=".Home">
-
-    <Button
-        android:id="@+id/places"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="166dp"
-        android:onClick="goToPlaces"
-        android:text="Places "
-        app:layout_constraintBottom_toTopOf="@+id/profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/mapIcon"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/blog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="92dp"
-        android:onClick="goToBlog"
-        android:text="Blog"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/profile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mapIcon" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -42,6 +15,7 @@
         android:onClick="goToInfo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/mapIcon"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/mapIcon"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/info1" />
@@ -65,13 +39,39 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="189dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="40dp"
         android:onClick="goToMap"
         app:layout_constraintBottom_toTopOf="@+id/blog"
         app:layout_constraintEnd_toStartOf="@+id/places"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/map" />
+
+    <ImageView
+        android:id="@+id/places"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="137dp"
+        app:layout_constraintBottom_toTopOf="@+id/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mapIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kafeterya" />
+
+    <ImageView
+        android:id="@+id/blog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="57dp"
+        android:onClick="goToBlog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapIcon"
+        app:srcCompat="@drawable/blog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
