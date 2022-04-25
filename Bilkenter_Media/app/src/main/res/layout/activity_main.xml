@@ -10,23 +10,25 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="125dp"
+        android:layout_marginBottom="29dp"
         android:ems="10"
         android:hint="Enter email"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/bilkentlogo" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="59dp"
+        android:layout_marginBottom="27dp"
         android:ems="10"
         android:hint="Enter password"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/signIn"
         app:layout_constraintStart_toStartOf="@+id/email"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
@@ -34,22 +36,35 @@
         android:id="@+id/signIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="69dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="40dp"
         android:onClick="signIn"
         android:text="Sign In"
         app:layout_constraintBottom_toTopOf="@+id/signUp"
-        app:layout_constraintStart_toStartOf="@+id/signUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
         android:id="@+id/signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="52dp"
         android:onClick="signUp"
         android:text="Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/signIn"
+        app:layout_constraintTop_toBottomOf="@+id/signIn" />
+
+    <ImageView
+        android:id="@+id/bilkentlogo"
+        android:layout_width="159dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bilkentlogo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
