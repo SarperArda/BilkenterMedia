@@ -14,6 +14,11 @@ import java.util.ArrayList;
 
 public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceHolder> {
     ArrayList<Place> placeArrayList;
+
+    public PlaceAdapter(ArrayList<Place> placeArrayList) {
+        this.placeArrayList = placeArrayList;
+    }
+
     @NonNull
     @Override
     public PlaceHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -28,7 +33,6 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceHolder>
      */
     @Override
     public void onBindViewHolder(@NonNull PlaceHolder holder, int position) {
-
     }
 
     @Override
