@@ -111,11 +111,15 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
 
 
     //Türker will continue this method.
+
     public void markPlaces(){
 
         ArrayList<LatLng> places = new ArrayList<>();
         LatLng yemekhane = new LatLng(39.8705899,32.7506622);
         places.add(yemekhane);
+        LatLng cafeIn1 = new LatLng(39.8699283,32.7505348);
+        places.add(cafeIn1);
+
         for (int i = 0; i < places.size(); i++) {
             mMap.addMarker(new MarkerOptions().position(places.get(i)));
         }
