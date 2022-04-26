@@ -27,8 +27,12 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
         mAuth = FirebaseAuth.getInstance();
+
         /**
          * After Home Screen is designed, this one will activate bcs this code checking current user and support no more effort to sign in again
+         *
+         */
+
         FirebaseUser user = mAuth.getCurrentUser();
 
         if(user != null){
@@ -36,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
-         */
 
     }
 

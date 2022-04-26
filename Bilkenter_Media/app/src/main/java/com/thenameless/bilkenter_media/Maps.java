@@ -28,6 +28,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.snackbar.Snackbar;
 import com.thenameless.bilkenter_media.databinding.ActivityMapsBinding;
 
+import java.util.ArrayList;
+
 public class Maps extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -86,6 +88,7 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
         }else{
             user.requestLocationUpdates(LocationManager.GPS_PROVIDER,10000,50,locationListener);
         }
+        markPlaces();
 
     }
 
@@ -104,6 +107,18 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
                 }
             }
         });
+    }
+
+
+    //Türker will continue this method.
+    public void markPlaces(){
+
+        ArrayList<LatLng> places = new ArrayList<>();
+        LatLng yemekhane = new LatLng(39.8705899,32.7506622);
+        places.add(yemekhane);
+        for (int i = 0; i < places.size(); i++) {
+            mMap.addMarker(new MarkerOptions().position(places.get(i)));
+        }
     }
 
     
