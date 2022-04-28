@@ -120,6 +120,7 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
         LatLng cafeIn1 = new LatLng(39.8699283,32.7505348);
         places.add(cafeIn1);
         // created
+        // cafe2
 
         for (int i = 0; i < places.size(); i++) {
             mMap.addMarker(new MarkerOptions().position(places.get(i)));
