@@ -124,13 +124,13 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
         LatLng catiAcikBufe = new LatLng(39.8636601,32.7446968);
         places.add(catiAcikBufe);
 
-        LatLng coffeeBreakIisbf = new LatLng(39.8682075,32.7469376);
-        places.add(coffeeBreakIisbf);
+        LatLng coffeeBreakIISBF = new LatLng(39.8682075,32.7469376);
+        places.add(coffeeBreakIISBF);
 
         LatLng speedCafe = new LatLng(39.8663148,32.7461129);
         places.add(speedCafe);
 
-        LatLng expressCafeG = new LatLng(39.8684323,32.750114);
+        LatLng expressCafeG = new LatLng(39.8684323,32.750114); // not sure
         places.add(expressCafeG);
 
         LatLng mozartCafeB = new LatLng(39.8687489,32.7479186);
@@ -145,8 +145,32 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
         LatLng bilka = new LatLng(39.8645731,32.7456103);
         places.add(bilka);
 
-        LatLng starbucksIF = new LatLng(39.8669768,32.749215);
-        places.add(starbucksIF);
+        LatLng starbucksGSTMF = new LatLng(39.8669768,32.749215);
+        places.add(starbucksGSTMF);
+
+        LatLng coffeeBreakV = new LatLng(39.8669974,32.7499487); // check coordínates
+        places.add(coffeeBreakV);
+
+        LatLng coffeeBreakUYDYO = new LatLng(39.8694315,32.7475907);
+        places.add(coffeeBreakUYDYO);
+
+        LatLng coffeeBreakLibraryUpstairs = new LatLng(39.8702701,32.7494944);
+        places.add(coffeeBreakLibraryUpstairs);
+
+        LatLng coffeeBreakLibraryFloor = new LatLng(39.8702701,32.7494944);
+        places.add(coffeeBreakLibraryFloor);
+
+        LatLng fieroCafeIISBF = new LatLng(39.8680578,32.7475331);
+        places.add(fieroCafeIISBF);
+
+        LatLng fieroCafeG = new LatLng(39.868398, 32.750153); // not sure
+        places.add(fieroCafeG);
+
+        LatLng yemekhaneEAST = new LatLng(39.871794, 32.764021);
+        places.add(yemekhaneEAST);
+
+        LatLng fameoCaffe = new LatLng(39.868446, 32.763683);
+        places.add(fameoCaffe);
 
         for (int i = 0; i < places.size(); i++) {
             mMap.addMarker(new MarkerOptions().position(places.get(i)));
