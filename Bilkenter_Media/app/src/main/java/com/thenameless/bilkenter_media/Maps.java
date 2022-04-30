@@ -117,10 +117,36 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
         ArrayList<LatLng> places = new ArrayList<>();
         LatLng yemekhane = new LatLng(39.8705899,32.7506622);
         places.add(yemekhane);
-        LatLng cafeIn1 = new LatLng(39.8699283,32.7505348);
-        places.add(cafeIn1);
-        // created
-        // cafe2
+
+        LatLng cafeIn = new LatLng(39.8699283,32.7505348);
+        places.add(cafeIn);
+
+        LatLng catiAcikBufe = new LatLng(39.8636601,32.7446968);
+        places.add(catiAcikBufe);
+
+        LatLng coffeeBreakIisbf = new LatLng(39.8682075,32.7469376);
+        places.add(coffeeBreakIisbf);
+
+        LatLng speedCafe = new LatLng(39.8663148,32.7461129);
+        places.add(speedCafe);
+
+        LatLng expressCafeG = new LatLng(39.8684323,32.750114);
+        places.add(expressCafeG);
+
+        LatLng mozartCafeB = new LatLng(39.8687489,32.7479186);
+        places.add(mozartCafeB);
+
+        LatLng mozartCafeEE = new LatLng(39.8720687,32.7508138);
+        places.add(mozartCafeEE);
+
+        LatLng sofaCafe = new LatLng(39.8642985,32.746967);
+        places.add(sofaCafe);
+
+        LatLng bilka = new LatLng(39.8645731,32.7456103);
+        places.add(bilka);
+
+        LatLng starbucksIF = new LatLng(39.8669768,32.749215);
+        places.add(starbucksIF);
 
         for (int i = 0; i < places.size(); i++) {
             mMap.addMarker(new MarkerOptions().position(places.get(i)));
