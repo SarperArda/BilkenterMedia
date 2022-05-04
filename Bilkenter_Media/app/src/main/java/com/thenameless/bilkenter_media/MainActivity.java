@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void signIn(View view){
         String email = binding.email.getText().toString();
         String password = binding.password.getText().toString();

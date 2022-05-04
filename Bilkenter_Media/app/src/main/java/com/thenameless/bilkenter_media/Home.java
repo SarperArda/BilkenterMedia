@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.thenameless.bilkenter_media.databinding.ActivityHomeBinding;
 
 public class Home extends AppCompatActivity {
@@ -42,6 +43,11 @@ public class Home extends AppCompatActivity {
     public void goToInfo(View view){
         Intent intent = new Intent(Home.this,Info.class);
         startActivity(intent);
+        finish();
+    }
+    public void logOut(View view){
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
     }
 }
