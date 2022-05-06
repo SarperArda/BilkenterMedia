@@ -10,6 +10,7 @@
         android:id="@+id/profileImage"
         android:layout_width="144dp"
         android:layout_height="138dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
