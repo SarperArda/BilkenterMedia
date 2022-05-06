@@ -161,10 +161,4 @@ public class EditProfile extends AppCompatActivity {
             }
         });
     }
-
-    public void goBackToProfile(View view){
-        Intent intent = new Intent(EditProfile.this, Profile.class);
-        startActivity(intent);
-        finish();
-    }
 }

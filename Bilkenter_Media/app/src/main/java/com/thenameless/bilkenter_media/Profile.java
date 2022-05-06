@@ -37,7 +37,7 @@ public class Profile extends AppCompatActivity {
     String name, surname;
     String userID;
     ImageView profilePicture;
-    Button changePicture, resetPassword, deleteAccount;
+    Button resetPassword, deleteAccount;
     FirebaseUser user;
 
     @Override
