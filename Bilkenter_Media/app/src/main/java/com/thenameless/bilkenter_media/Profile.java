@@ -70,4 +70,9 @@ public class Profile extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void goToEditProfile(View view){
+        Intent intent = new Intent(Profile.this, EditProfile.class);
+        startActivity(intent);
+        finish();
+    }
 }
