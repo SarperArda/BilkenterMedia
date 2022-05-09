@@ -33,7 +33,7 @@ import java.util.Map;
 public class EditProfile extends AppCompatActivity {
 
     private static final String TAG = "TAG";
-    Button changePicture, saveProfile;
+    Button saveProfile;
     FirebaseFirestore fStore;
     FirebaseAuth fAuth;
     String userID;
@@ -55,11 +55,10 @@ public class EditProfile extends AppCompatActivity {
 
         profileName = findViewById(R.id.PersonName);
         profileSurname = findViewById(R.id.PersonSurname);
-        profileBirthday = findViewById(R.id.PersonBirthday);
         profileMail = findViewById(R.id.personMail);
-        profileImage = findViewById(R.id.profileImage);
+        profileBirthday = findViewById(R.id.PersonBirthday);
 
-        changePicture = findViewById(R.id.changePicture);
+        profileImage = findViewById(R.id.profileImage);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -78,7 +77,7 @@ public class EditProfile extends AppCompatActivity {
             }
         });
 
-        changePicture.setOnClickListener(new View.OnClickListener() {
+        profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -89,7 +88,7 @@ public class EditProfile extends AppCompatActivity {
         saveProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(profileName.getText().toString().isEmpty() ||profileSurname.getText().toString().isEmpty() || profileBirthday.getText().toString().isEmpty()){
+                if(profileName.getText().toString().isEmpty() ||profileSurname.getText().toString().isEmpty() || profileBirthday.getText().toString().isEmpty()|| profileMail.getText().toString().isEmpty()){
                     Toast.makeText(EditProfile.this, "One or many fields are empty!", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -99,9 +98,9 @@ public class EditProfile extends AppCompatActivity {
                     public void onSuccess(Void unused) {
                         DocumentReference reference = fStore.collection("Users Database").document(user.getUid());
                         Map<String,Object> edited = new HashMap<>();
-                        edited.put("Name",profileName);
-                        edited.put("Surname",profileSurname);
-                        edited.put("Birthday",profileBirthday);
+                        edited.put("Name",profileName.getText().toString());
+                        edited.put("Surname",profileSurname.getText().toString());
+                        edited.put("Birthday",profileBirthday.getText().toString());
                         edited.put("E-mail",email);
                         reference.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
