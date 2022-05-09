@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bilkenter_Media">
         <activity
+            android:name=".blogReadingActivity"
+            android:exported="true" />
+        <activity
             android:name=".Info"
             android:exported="false" />
         <activity
@@ -25,7 +28,7 @@
             android:name=".Profile"
             android:exported="false" />
         <activity
-            android:name=".Blog"
+            android:name=".Blogs"
             android:exported="false" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

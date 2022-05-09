@@ -1,20 +1,29 @@
 package com.thenameless.bilkenter_media;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
 import android.view.View;
 
-import com.thenameless.bilkenter_media.databinding.ActivityBlogBinding;
+import com.thenameless.bilkenter_media.databinding.ActivityBlogsBinding;
 
-public class Blog extends AppCompatActivity {
+import java.util.ArrayList;
 
-    private ActivityBlogBinding binding;
+public class Blogs extends AppCompatActivity {
+
+    private ActivityBlogsBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityBlogBinding.inflate(getLayoutInflater());
+        binding = ActivityBlogsBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        ArrayList<Blog> list = new ArrayList<Blog>();
+        Blog blog1 = new Blog("ercan");
+        list.add(blog1);
+        binding.recylerView.setLayoutManager(new LinearLayoutManager(this));
+        BlogAdapter adapt = new BlogAdapter(list);
+        binding.recylerView.setAdapter(adapt);
     }
 }                                                           

@@ -35,7 +35,7 @@ public class Home extends AppCompatActivity {
         finish();
     }
     public void goToBlog(View view){
-        Intent intent = new Intent(Home.this,Blog.class);
+        Intent intent = new Intent(Home.this,Blogs.class);
         startActivity(intent);
         finish();
     }

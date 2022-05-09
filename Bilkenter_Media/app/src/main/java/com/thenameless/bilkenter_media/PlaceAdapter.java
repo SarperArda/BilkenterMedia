@@ -33,6 +33,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceHolder>
      */
     @Override
     public void onBindViewHolder(@NonNull PlaceHolder holder, int position) {
+        holder.binding.placeName.setText(placeArrayList.get(position).placeName);
     }
 
     @Override
