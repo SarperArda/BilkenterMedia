@@ -85,15 +85,18 @@ public class Profile extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onEvent(DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                if (!Objects.requireNonNull(value).exists()) {
-                    Log.d("tag", "Document does not exists.");
-                } else {
-                    email.setText(value.getString("E-mail"));
-                    birthday.setText(value.getString("Birthday"));
-                    name = value.getString("Name");
-                    surname = value.getString("Surname");
-                    fullName.setText(name + " " + surname);
+                if(value != null){
+                    if (!value.exists()) {
+                        Log.d("tag", "Document does not exists.");
+                    } else {
+                        email.setText(value.getString("E-mail"));
+                        birthday.setText(value.getString("Birthday"));
+                        name = value.getString("Name");
+                        surname = value.getString("Surname");
+                        fullName.setText(name + " " + surname);
+                    }
                 }
+
             }
         });
 
