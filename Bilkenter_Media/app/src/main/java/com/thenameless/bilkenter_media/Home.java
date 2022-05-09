@@ -44,4 +44,9 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void addBlog(View view){
+        Intent intent = new Intent(Home.this,blogAdd.class);
+        startActivity(intent);
+        finish();
+    }
 }

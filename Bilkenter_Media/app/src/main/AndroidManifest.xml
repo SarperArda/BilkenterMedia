@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bilkenter_Media">
         <activity
+            android:name=".blogAdd"
+            android:exported="false" />
+        <activity
             android:name=".blogReadingActivity"
             android:exported="true" />
         <activity

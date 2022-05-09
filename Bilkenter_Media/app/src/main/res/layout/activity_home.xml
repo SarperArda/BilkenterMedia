@@ -74,4 +74,13 @@
         app:layout_constraintTop_toBottomOf="@+id/mapIcon"
         app:srcCompat="@drawable/blog" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addBlog"
+        android:text="Button"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="295dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
