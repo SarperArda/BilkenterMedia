@@ -37,9 +37,11 @@ public class blogAdd extends AppCompatActivity {
 
     public void saveBlog(View view){
         String blog = binding.blogbyuser.getText().toString();
+        String blogName = binding.blogName.getText().toString();
         FirebaseUser userCurrent = mAuth.getCurrentUser();
         String user = userCurrent.getDisplayName();
         HashMap<String,Object> postBlog = new HashMap<>();
+        postBlog.put("blogName",blogName);
         postBlog.put("blog",blog);
         postBlog.put("user",user);
         postBlog.put("date", FieldValue.serverTimestamp());

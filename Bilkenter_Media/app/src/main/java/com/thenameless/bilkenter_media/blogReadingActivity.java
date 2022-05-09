@@ -15,40 +15,28 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.thenameless.bilkenter_media.databinding.ActivityBlogReadingBinding;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class blogReadingActivity extends AppCompatActivity {
-    private FirebaseAuth mAuth;
-    private FirebaseFirestore firebaseFirestore;
+
+    private ActivityBlogReadingBinding binding;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blog_reading);
-        mAuth = FirebaseAuth.getInstance();
-        firebaseFirestore = FirebaseFirestore.getInstance();
-        getData();
+        intent = getIntent();
+        binding = ActivityBlogReadingBinding.inflate(getLayoutInflater());
+        binding.username.setText(intent.getStringExtra("userName"));
+        binding.userBlog.setText(intent.getStringExtra("blogName"));
+        View view = binding.getRoot();
+        setContentView(view);
 
     }
 
-    private void getData(){
-        firebaseFirestore.collection("blog").addSnapshotListener(new EventListener<QuerySnapshot>() {
-            @Override
-            public void onEvent( QuerySnapshot value,  FirebaseFirestoreException error) {
-                if(error != null){
-                    Toast.makeText(blogReadingActivity.this, error.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                }
-                if(value != null){
-                    for (DocumentSnapshot snapshot: value.getDocuments()){
-                        Map<String,Object> data = snapshot.getData();
-                        String user = (String) data.get("user");
-                        String blog = (String) data.get("blog");
-                        FieldValue date = (FieldValue) data.get("date");
-                    }
-                }
-            }
-        });
-    }
+
 }

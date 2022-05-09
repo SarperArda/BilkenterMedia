@@ -17,8 +17,10 @@ import java.util.ArrayList;
 public class BlogAdapter  extends RecyclerView.Adapter<BlogAdapter.BlogHolder>{
     ArrayList<Blog> blogArrayList;
 
+
     public BlogAdapter(ArrayList<Blog> blog) {
         this.blogArrayList = blog;
+
     }
     @NonNull
     @Override
@@ -29,12 +31,14 @@ public class BlogAdapter  extends RecyclerView.Adapter<BlogAdapter.BlogHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull BlogHolder holder, int position) {
-        holder.binding.Blog.setText(blogArrayList.get(position).blogName);
+        holder.binding.userBlog.setText(blogArrayList.get(position).blogName);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(holder.itemView.getContext(),blogReadingActivity.class );
                 intent.putExtra("blog",blogArrayList.get(position));
+                intent.putExtra("blogName",blogArrayList.get(position).blogName);
+                intent.putExtra("userName",blogArrayList.get(position).user);
                 holder.itemView.getContext().startActivity(intent);
             }
         });

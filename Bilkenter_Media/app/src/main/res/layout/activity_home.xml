@@ -29,7 +29,7 @@
         android:onClick="goToProfile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/blog"
+        app:layout_constraintStart_toEndOf="@+id/addBlog"
         app:layout_constraintTop_toBottomOf="@+id/places"
         app:srcCompat="@drawable/profile" />
 
@@ -40,9 +40,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="55dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="208dp"
         android:onClick="goToMap"
-        app:layout_constraintBottom_toTopOf="@+id/blog"
+        app:layout_constraintBottom_toTopOf="@+id/addBlog"
         app:layout_constraintEnd_toStartOf="@+id/places"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -75,12 +75,17 @@
         app:srcCompat="@drawable/blog" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addBlog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="65dp"
         android:onClick="addBlog"
-        android:text="Button"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="295dp" />
+        android:text="AddBlog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapIcon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
