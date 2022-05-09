@@ -16,6 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bilkenter_Media">
         <activity
+            android:name=".placedetails"
+            android:exported="true" />
+        <activity
+            android:name=".placeactivity"
+            android:exported="true"
+            android:label="@string/title_activity_placeactivity"
+            android:theme="@style/Theme.Bilkenter_Media.NoActionBar" />
+        <activity
             android:name=".blogAdd"
             android:exported="false" />
         <activity
