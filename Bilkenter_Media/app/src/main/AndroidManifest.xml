@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bilkenter_Media">
         <activity
+            android:name=".PlacePart.readComment"
+            android:exported="true" />
+        <activity
             android:name=".PlacePart.CommentAdd"
             android:exported="false" />
         <activity
