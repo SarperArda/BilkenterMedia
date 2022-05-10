@@ -31,8 +31,6 @@ public class blogReadingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(view);
         View view = binding.getRoot();
         binding.userBlog.setText(intent.getStringExtra("blogName"));
         binding.username.setText(intent.getStringExtra("userName"));
