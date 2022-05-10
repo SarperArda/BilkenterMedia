@@ -9,20 +9,21 @@
     <ImageView
         android:id="@+id/photo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="350dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:srcCompat="@drawable/bilkentlogo" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/placename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
         android:text="TextView"
-        android:textSize="25dp"
-        app:layout_constraintStart_toEndOf="@+id/photo"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

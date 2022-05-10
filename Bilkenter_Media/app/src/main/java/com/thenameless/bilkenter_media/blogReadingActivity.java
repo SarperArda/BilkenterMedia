@@ -18,11 +18,9 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.Map;
-import java.util.HashMap;
 import java.util.ArrayList;
-
+import java.util.HashMap;
+import java.util.Map;
 public class blogReadingActivity extends AppCompatActivity {
 
     private Intent intent;

@@ -18,5 +18,8 @@ public class placedetails extends AppCompatActivity {
         binding = ActivityPlacedetailsBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        Intent intent = getIntent();
+        binding.photo.setImageResource(intent.getIntExtra("photo", 0));
+        binding.placename.setText(intent.getStringExtra("placename"));
     }
 }

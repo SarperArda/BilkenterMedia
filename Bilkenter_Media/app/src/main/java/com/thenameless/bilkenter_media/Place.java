@@ -1,6 +1,8 @@
 package com.thenameless.bilkenter_media;
 
 
+import android.content.Intent;
+
 import java.util.ArrayList;
 import java.io.Serializable;
 public class Place implements Serializable {
@@ -9,13 +11,15 @@ public class Place implements Serializable {
     public String closingTime;
     public ArrayList<Rank> ranks;
     public ArrayList<Comment> comments;
+    public int image;
 
-    public Place(String placeName, String openingTime, String closingTime, ArrayList<Rank> ranks, ArrayList<Comment> comments) {
+    public Place (String placeName, String openingTime, String closingTime, ArrayList<Rank> ranks, ArrayList<Comment> comments, int image) {
         this.placeName = placeName;
         this.openingTime = openingTime;
         this.closingTime = closingTime;
         this.ranks = ranks;
         this.comments = comments;
+        this.image = image;
     }
     public double getAverageRank(){
         int sum = 0;
