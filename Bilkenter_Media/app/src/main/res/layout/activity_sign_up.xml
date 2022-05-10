@@ -13,7 +13,8 @@
         android:layout_marginTop="56dp"
         android:ems="10"
         android:hint="Enter Your Name"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,6 +28,7 @@
         android:ems="10"
         android:hint="Enter Your Surname"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@+id/Username"
         app:layout_constraintTop_toBottomOf="@+id/Username" />
 
@@ -38,7 +40,9 @@
         android:ems="10"
         android:hint="Enter Your Mail"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/UserSurname"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/UserSurname" />
 
     <EditText
@@ -50,8 +54,13 @@
         android:ems="10"
         android:hint="Enter Your Password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/userBirthday"
-        app:layout_constraintEnd_toEndOf="@+id/userBirthday" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userMail"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/userBirthday"
@@ -61,6 +70,7 @@
         android:ems="10"
         android:hint="Enter Your Birthday"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/SignUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
