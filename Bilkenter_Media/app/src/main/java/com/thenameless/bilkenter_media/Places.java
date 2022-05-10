@@ -23,8 +23,8 @@ public class Places extends AppCompatActivity {
 
         // data
         ArrayList<Place> places = new ArrayList<Place>();
-        Place mozart = new Place("Mozart");
-        places.add(mozart);
+        //Place mozart = new Place("Mozart");
+        //places.add(mozart);
         binding.placesRecycler.setLayoutManager(new LinearLayoutManager(this));
         PlaceAdapter placeAdapter = new PlaceAdapter(places);
         binding.placesRecycler.setAdapter(placeAdapter);

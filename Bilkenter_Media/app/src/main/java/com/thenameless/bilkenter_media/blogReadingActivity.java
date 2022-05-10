@@ -23,7 +23,6 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.ArrayList;
 
-import com.thenameless.bilkenter_media.databinding.ActivityBlogReadingBinding;
 public class blogReadingActivity extends AppCompatActivity {
 
     private Intent intent;
@@ -31,11 +30,12 @@ public class blogReadingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        View view = binding.getRoot();
-        binding.userBlog.setText(intent.getStringExtra("blogName"));
-        binding.username.setText(intent.getStringExtra("userName"));
-        binding = ActivityBlogReadingBinding.inflate(getLayoutInflater());
         intent = getIntent();
+        binding = ActivityBlogReadingBinding.inflate(getLayoutInflater());
+        binding.username.setText(intent.getStringExtra("userName"));
+        binding.userBlog.setText(intent.getStringExtra("blogName"));
+        View view = binding.getRoot();
+        setContentView(view);
     }
 
 
