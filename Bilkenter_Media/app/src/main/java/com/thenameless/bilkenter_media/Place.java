@@ -24,4 +24,12 @@ public class Place implements Serializable {
         }
         return (sum/ranks.size());
     }
+
+    public ArrayList<Rank> getRanks() {
+        return ranks;
+    }
+
+    public ArrayList<Comment> getComments() {
+        return comments;
+    }
 }
