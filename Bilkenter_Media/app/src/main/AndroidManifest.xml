@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bilkenter_Media">
         <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
             android:name=".placedetails"
             android:exported="true" />
         <activity

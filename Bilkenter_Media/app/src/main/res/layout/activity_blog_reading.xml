@@ -25,4 +25,12 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="TextView" />
+
+    <TextView
+        android:id="@+id/blog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textColor="@color/purple_700"
+        android:text="TextView" />
 </LinearLayout>
