@@ -22,4 +22,12 @@ public class placedetails extends AppCompatActivity {
         binding.photo.setImageResource(intent.getIntExtra("photo", 0));
         binding.placename.setText(intent.getStringExtra("placename"));
     }
+    public void goToComments(View view){
+        Intent intent = new Intent(placedetails.this,CommentAdd.class);
+        startActivity(intent);
+    }
+    public void goToCommentAdd(View view){
+        Intent intent = new Intent(placedetails.this,CommentAdd.class);
+        startActivity(intent);
+    }
 }
