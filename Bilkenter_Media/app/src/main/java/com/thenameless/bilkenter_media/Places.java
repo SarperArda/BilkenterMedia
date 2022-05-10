@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 public class Places extends AppCompatActivity {
     private ActivityPlacesBinding binding;
+    ArrayList<Comment> comments;
+    ArrayList<Rank> ranks;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
