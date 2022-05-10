@@ -28,7 +28,7 @@
         android:layout_marginBottom="110dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Add your thoughts"
+        android:hint="Add your thoughts!"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/save"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,12 @@
         android:ems="10"
         android:hint="Blog Name"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="48dp" />
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
