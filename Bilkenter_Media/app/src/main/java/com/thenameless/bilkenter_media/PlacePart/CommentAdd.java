@@ -1,4 +1,4 @@
-package com.thenameless.bilkenter_media;
+package com.thenameless.bilkenter_media.PlacePart;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,49 +15,49 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.thenameless.bilkenter_media.BlogPart.Blogs;
+import com.thenameless.bilkenter_media.BlogPart.blogAdd;
 import com.thenameless.bilkenter_media.databinding.ActivityBlogAddBinding;
-import com.thenameless.bilkenter_media.databinding.ActivityPlacesBinding;
+import com.thenameless.bilkenter_media.databinding.ActivityCommentAddBinding;
 
 import java.util.HashMap;
 
-public class blogAdd extends AppCompatActivity {
+public class CommentAdd extends AppCompatActivity {
+    private ActivityCommentAddBinding binding;
     private FirebaseAuth mAuth;
-    private ActivityBlogAddBinding binding;
     private FirebaseFirestore firebaseFirestore;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityBlogAddBinding.inflate(getLayoutInflater());
+        binding = ActivityCommentAddBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
         mAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
     }
 
-    public void saveBlog(View view){
-        String blog = binding.blogbyuser.getText().toString();
-        String blogName = binding.blogName.getText().toString();
+    public void saveComment(View view){
+        String comment = binding.commentByUser.getText().toString();
+        int rank = binding.rank.getInputType();
         FirebaseUser userCurrent = mAuth.getCurrentUser();
-        String user = userCurrent.getDisplayName();
-        HashMap<String,Object> postBlog = new HashMap<>();
-        postBlog.put("blogName",blogName);
-        postBlog.put("blog",blog);
-        postBlog.put("user",user);
-        postBlog.put("date", FieldValue.serverTimestamp());
-        firebaseFirestore.collection("blog").add(postBlog).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        String userName = userCurrent.getDisplayName();
+        HashMap<String,Object> comments = new HashMap<>();
+        comments.put("comment",comment);
+        comments.put("rank",rank);
+        comments.put("userName",userName);
+        //comments.put("date", FieldValue.serverTimestamp());
+        firebaseFirestore.collection("comments").add(comments).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
-                Intent intent = new Intent(blogAdd.this,Blogs.class);
+                Intent intent = new Intent(CommentAdd.this, Places.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(blogAdd.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(CommentAdd.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
-
 }

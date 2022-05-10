@@ -1,4 +1,4 @@
-package com.thenameless.bilkenter_media;
+package com.thenameless.bilkenter_media.BlogPart;
 
 import com.google.firebase.firestore.FieldValue;
 

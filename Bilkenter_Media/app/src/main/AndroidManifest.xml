@@ -16,10 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bilkenter_Media">
         <activity
-            android:name=".EditProfile"
+            android:name=".PlacePart.CommentAdd"
             android:exported="false" />
         <activity
-            android:name=".placedetails"
+            android:name=".ProfilePart.EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".PlacePart.placedetails"
             android:exported="true" />
         <activity
             android:name=".placeactivity"
@@ -27,22 +30,19 @@
             android:label="@string/title_activity_placeactivity"
             android:theme="@style/Theme.Bilkenter_Media.NoActionBar" />
         <activity
-            android:name=".blogAdd"
+            android:name=".BlogPart.blogAdd"
             android:exported="false" />
         <activity
-            android:name=".blogReadingActivity"
+            android:name=".BlogPart.blogReadingActivity"
             android:exported="true" />
         <activity
             android:name=".Info"
             android:exported="false" />
         <activity
-            android:name=".Settings"
+            android:name=".ProfilePart.Profile"
             android:exported="false" />
         <activity
-            android:name=".Profile"
-            android:exported="false" />
-        <activity
-            android:name=".Blogs"
+            android:name=".BlogPart.Blogs"
             android:exported="false" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -61,7 +61,7 @@
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".Places"
+            android:name=".PlacePart.Places"
             android:exported="false" />
         <activity
             android:name=".Home"

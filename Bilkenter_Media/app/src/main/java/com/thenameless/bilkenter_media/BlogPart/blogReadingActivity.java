@@ -1,4 +1,4 @@
-package com.thenameless.bilkenter_media;
+package com.thenameless.bilkenter_media.BlogPart;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.thenameless.bilkenter_media;
+package com.thenameless.bilkenter_media.ProfilePart;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,6 +26,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
+import com.thenameless.bilkenter_media.R;
 
 import java.util.HashMap;
 import java.util.Map;

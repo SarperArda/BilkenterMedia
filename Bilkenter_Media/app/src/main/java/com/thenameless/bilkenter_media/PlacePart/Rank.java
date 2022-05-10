@@ -1,4 +1,4 @@
-package com.thenameless.bilkenter_media;
+package com.thenameless.bilkenter_media.PlacePart;
 
 public class Rank {
     public int rank;

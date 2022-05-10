@@ -1,4 +1,4 @@
-package com.thenameless.bilkenter_media;
+package com.thenameless.bilkenter_media.PlacePart;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,8 +6,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.os.Bundle;
 import android.view.View;
 
+import com.thenameless.bilkenter_media.PlacePart.Comment;
+import com.thenameless.bilkenter_media.PlacePart.Place;
+import com.thenameless.bilkenter_media.PlacePart.PlaceAdapter;
+import com.thenameless.bilkenter_media.PlacePart.Rank;
+import com.thenameless.bilkenter_media.R;
 import com.thenameless.bilkenter_media.databinding.ActivityPlacesBinding;
-import com.thenameless.bilkenter_media.databinding.ActivityProfileBinding;
 
 import java.util.ArrayList;
 

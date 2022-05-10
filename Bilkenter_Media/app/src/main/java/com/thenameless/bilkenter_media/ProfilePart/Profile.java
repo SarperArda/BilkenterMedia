@@ -1,4 +1,4 @@
-package com.thenameless.bilkenter_media;
+package com.thenameless.bilkenter_media.ProfilePart;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
@@ -32,6 +32,10 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
+import com.thenameless.bilkenter_media.Home;
+import com.thenameless.bilkenter_media.MainActivity;
+import com.thenameless.bilkenter_media.R;
+import com.thenameless.bilkenter_media.SignUp;
 
 import java.util.Objects;
 

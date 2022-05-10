@@ -1,4 +1,4 @@
-package com.thenameless.bilkenter_media;
+package com.thenameless.bilkenter_media.BlogPart;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.thenameless.bilkenter_media.databinding.BlogviewBinding;
-import com.thenameless.bilkenter_media.databinding.RecyclerHelperBinding;
 
 import java.util.ArrayList;
 
@@ -35,7 +34,7 @@ public class BlogAdapter  extends RecyclerView.Adapter<BlogAdapter.BlogHolder>{
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(holder.itemView.getContext(),blogReadingActivity.class );
+                Intent intent = new Intent(holder.itemView.getContext(), blogReadingActivity.class );
                 intent.putExtra("blog",blogArrayList.get(position).blog);
                 intent.putExtra("blogName",blogArrayList.get(position).blogName);
                 intent.putExtra("userName",blogArrayList.get(position).user);

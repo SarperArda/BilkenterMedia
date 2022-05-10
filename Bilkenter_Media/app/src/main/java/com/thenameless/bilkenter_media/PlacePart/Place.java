@@ -1,7 +1,5 @@
-package com.thenameless.bilkenter_media;
+package com.thenameless.bilkenter_media.PlacePart;
 
-
-import android.content.Intent;
 
 import java.util.ArrayList;
 import java.io.Serializable;

@@ -1,4 +1,4 @@
-package com.thenameless.bilkenter_media;
+package com.thenameless.bilkenter_media.PlacePart;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.Placeholder;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.thenameless.bilkenter_media.databinding.RecyclerHelperBinding;
