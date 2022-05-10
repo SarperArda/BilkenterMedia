@@ -8,11 +8,13 @@
 
     <Button
         android:id="@+id/saveComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="97dp"
+        android:layout_width="150dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="34dp"
         android:onClick="saveComment"
         android:text="Save"
+
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -21,25 +23,31 @@
         android:id="@+id/rank"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
-        android:hint="Enter Your Rank"
+        android:hint="Enter Your Rating (1 to 5)"
         android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/commentByUser"
-        android:layout_width="245dp"
-        android:layout_height="208dp"
-        android:layout_marginTop="213dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="110dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Enter your comment"
+        android:hint="Enter your comment!"
         android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/saveComment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
