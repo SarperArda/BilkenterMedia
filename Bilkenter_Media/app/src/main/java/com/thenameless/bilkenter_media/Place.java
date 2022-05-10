@@ -1,8 +1,9 @@
 package com.thenameless.bilkenter_media;
 
-import java.util.ArrayList;
 
-public class Place {
+import java.util.ArrayList;
+import java.io.Serializable;
+public class Place implements Serializable {
     public String placeName;
     public String openingTime;
     public String closingTime;
