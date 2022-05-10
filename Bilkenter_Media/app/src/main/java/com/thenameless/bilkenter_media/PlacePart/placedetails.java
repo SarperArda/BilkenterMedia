@@ -23,7 +23,7 @@ public class placedetails extends AppCompatActivity {
         binding.placename.setText(intent.getStringExtra("placename"));
     }
     public void goToComments(View view){
-        Intent intent = new Intent(placedetails.this,CommentAdd.class);
+        Intent intent = new Intent(placedetails.this,readComment.class);
         startActivity(intent);
     }
     public void goToCommentAdd(View view){

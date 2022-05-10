@@ -1,4 +1,4 @@
-package com.thenameless.bilkenter_media;
+package com.thenameless.bilkenter_media.BlogPart;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,9 +16,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.thenameless.bilkenter_media.databinding.ActivityBlogAddBinding;
-import com.thenameless.bilkenter_media.databinding.ActivityPlacesBinding;
-
-import org.w3c.dom.Document;
 
 import java.util.HashMap;
 
@@ -55,7 +52,7 @@ public class blogAdd extends AppCompatActivity {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 Intent intent = new Intent(blogAdd.this,Blogs.class);
-                intent.putExtra("name", new Profile().getName());
+                //intent.putExtra("name", new Profile().getName());
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
