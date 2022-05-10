@@ -194,5 +194,9 @@ public class Profile extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public String getName(){
+        return name;
+    }
+
 
 }

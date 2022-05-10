@@ -3,6 +3,7 @@ package com.thenameless.bilkenter_media.BlogPart;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -23,6 +24,8 @@ public class Blogs extends AppCompatActivity {
     private FirebaseFirestore firebaseFirestore;
     ArrayList<Blog> blogArr;
     BlogAdapter adapt;
+    Intent intent;
+
 
     private ActivityBlogsBinding binding;
     @Override
@@ -31,6 +34,8 @@ public class Blogs extends AppCompatActivity {
         binding = ActivityBlogsBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        intent = getIntent();
+
 
         blogArr = new ArrayList<>();
         mAuth = FirebaseAuth.getInstance();
@@ -53,7 +58,7 @@ public class Blogs extends AppCompatActivity {
                     for (DocumentSnapshot snapshot: value.getDocuments()){
                         Map<String,Object> data = snapshot.getData();
                         String blogName = (String) data.get("blogName");
-                        String user = (String) data.get("user");
+                        String user = intent.getStringExtra("name"); // not working
                         String blog = (String) data.get("blog");
                         //FieldValue date = (FieldValue) data.get("date");
                         Blog blogAdd = new Blog(blogName,user,blog);

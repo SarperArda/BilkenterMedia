@@ -1,4 +1,4 @@
-package com.thenameless.bilkenter_media.BlogPart;
+package com.thenameless.bilkenter_media;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +16,9 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.thenameless.bilkenter_media.databinding.ActivityBlogAddBinding;
+import com.thenameless.bilkenter_media.databinding.ActivityPlacesBinding;
+
+import org.w3c.dom.Document;
 
 import java.util.HashMap;
 
@@ -23,6 +26,7 @@ public class blogAdd extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private ActivityBlogAddBinding binding;
     private FirebaseFirestore firebaseFirestore;
+    String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,16 +42,20 @@ public class blogAdd extends AppCompatActivity {
         String blog = binding.blogbyuser.getText().toString();
         String blogName = binding.blogName.getText().toString();
         FirebaseUser userCurrent = mAuth.getCurrentUser();
+        userID = userCurrent.getUid();
+        DocumentReference docRef = firebaseFirestore.collection("blogs").document(userID);
+
         String user = userCurrent.getDisplayName();
         HashMap<String,Object> postBlog = new HashMap<>();
         postBlog.put("blogName",blogName);
         postBlog.put("blog",blog);
-        postBlog.put("user",user);
+       // postBlog.put("user",user);
         postBlog.put("date", FieldValue.serverTimestamp());
         firebaseFirestore.collection("blog").add(postBlog).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
-                Intent intent = new Intent(blogAdd.this, Blogs.class);
+                Intent intent = new Intent(blogAdd.this,Blogs.class);
+                intent.putExtra("name", new Profile().getName());
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
