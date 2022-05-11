@@ -27,36 +27,36 @@ public class Home extends AppCompatActivity {
     public void goToPlaces(View view){
         Intent intent = new Intent(Home.this, Places.class);
         startActivity(intent);
-        finish();
+
     }
     public void goToMap(View view){
         Intent intent = new Intent(Home.this,Maps.class);
         startActivity(intent);
-        finish();
+
     }
     public void goToProfile(View view){
         Intent intent = new Intent(Home.this, Profile.class);
         startActivity(intent);
-        finish();
+
     }
     public void goToBlog(View view){
         Intent intent = new Intent(Home.this, Blogs.class);
         startActivity(intent);
-        finish();
+
     }
     public void goToInfo(View view){
         Intent intent = new Intent(Home.this,Info.class);
         startActivity(intent);
-        finish();
+
     }
     public void addBlog(View view){
         Intent intent = new Intent(Home.this, blogAdd.class);
         startActivity(intent);
-        finish();
+
     }
     public void goc(View view){
         Intent intent = new Intent(Home.this, CommentAdd.class);
         startActivity(intent);
-        finish();
+
     }
 }

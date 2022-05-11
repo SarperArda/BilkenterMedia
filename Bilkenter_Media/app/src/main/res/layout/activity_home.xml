@@ -15,7 +15,7 @@
         android:onClick="goToInfo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/mapIcon"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toEndOf="@+id/mapIcon"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/info1" />
@@ -59,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/mapIcon"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kafeterya" />
+        app:srcCompat="@drawable/kafeterya_logo" />
 
     <ImageView
         android:id="@+id/blog"
@@ -87,14 +87,5 @@
         app:layout_constraintEnd_toStartOf="@+id/profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mapIcon" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="goc"
-        android:text="Button"
-        tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="285dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

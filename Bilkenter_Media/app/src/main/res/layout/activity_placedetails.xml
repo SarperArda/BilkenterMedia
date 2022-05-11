@@ -40,31 +40,22 @@
         android:id="@+id/closedTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/rankPlace"
-        app:layout_constraintStart_toEndOf="@+id/rankPlace" />
-
-    <TextView
-        android:id="@+id/rankPlace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/opennigTime"
-        app:layout_constraintTop_toBottomOf="@+id/opennigTime" />
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="433dp" />
 
     <Button
         android:id="@+id/comments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="57dp"
         android:layout_marginBottom="38dp"
         android:onClick="goToComments"
         android:text="comments"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rankPlace" />
+        app:layout_constraintEnd_toEndOf="@+id/placename"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/commentAdd"

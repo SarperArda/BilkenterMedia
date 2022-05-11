@@ -26,30 +26,32 @@ public class CommentAdd extends AppCompatActivity {
     private ActivityCommentAddBinding binding;
     private FirebaseAuth mAuth;
     private FirebaseFirestore firebaseFirestore;
+    String placename;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityCommentAddBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        Intent intent = getIntent();
+        placename = intent.getStringExtra("name");
         mAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
     }
 
     public void saveComment(View view){
         String comment = binding.commentByUser.getText().toString();
-        int rank = binding.rank.getInputType();
+        float rank = binding.ratingBar.getNumStars();
         FirebaseUser userCurrent = mAuth.getCurrentUser();
         String userName = userCurrent.getDisplayName();
         HashMap<String,Object> comments = new HashMap<>();
         comments.put("comment",comment);
         comments.put("rank",rank);
-        comments.put("userName",userName);
         //comments.put("date", FieldValue.serverTimestamp());
-        firebaseFirestore.collection("comments").add(comments).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        firebaseFirestore.collection(placename).add(comments).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
-                Intent intent = new Intent(CommentAdd.this, Places.class);
+                Intent intent = new Intent(CommentAdd.this, readComment.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }

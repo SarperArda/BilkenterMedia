@@ -3,19 +3,19 @@ package com.thenameless.bilkenter_media.BlogPart;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
-import com.google.firebase.firestore.FirebaseFirestore;
 import com.thenameless.bilkenter_media.databinding.ActivityBlogAddBinding;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 
@@ -26,6 +26,7 @@ public class blogAdd extends AppCompatActivity {
     String userID;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityBlogAddBinding.inflate(getLayoutInflater());
@@ -52,13 +53,13 @@ public class blogAdd extends AppCompatActivity {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 Intent intent = new Intent(blogAdd.this,Blogs.class);
-                //intent.putExtra("name", new Profile().getName());
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+
                 Toast.makeText(blogAdd.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
