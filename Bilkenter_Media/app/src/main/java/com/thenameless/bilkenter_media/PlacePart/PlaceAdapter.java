@@ -22,7 +22,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceHolder>
     @NonNull
     @Override
     public PlaceHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        RecyclerHelperBinding binding = RecyclerHelperBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+        RecyclerHelperBinding binding = RecyclerHelperBinding.inflate(LayoutInflater.from(parent.getContext()));
         return new PlaceHolder(binding);
     }
 
@@ -33,7 +33,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceHolder>
      */
     @Override
     public void onBindViewHolder(@NonNull PlaceHolder holder, int position) {
-        holder.binding.placeName.setText(placeArrayList.get(position).placeName);
+        holder.binding.placename.setText(placeArrayList.get(position).placeName);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

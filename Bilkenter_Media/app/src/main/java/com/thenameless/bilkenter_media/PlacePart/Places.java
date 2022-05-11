@@ -22,10 +22,17 @@ public class Places extends AppCompatActivity {
 
         // data
         ArrayList<Place> places = new ArrayList<Place>();
-        Place mozart = new Place("mozart","10:30","22:00", R.drawable.mozart );
-        Place fameo = new Place("fameo","10:30","22:00", R.drawable.mozart );
-        places.add(mozart);
+
+        Place mozart = new Place("mozart","08:00","18:45", R.drawable.mozart );
+        Place fameo = new Place("fameo","08:00","18:00", R.drawable.fameo );
+        Place coffee_break = new Place("coffee_break","08:00","17:30", R.drawable.coffeebreak );
+        Place yemekhane = new Place("yemekhane","08:00","20:00", R.drawable.yemekhane );
+        Place speed = new Place("speed","07:30","21:30", R.drawable.speed );
+        places.add(coffee_break);
         places.add(fameo);
+        places.add(mozart);
+        places.add(yemekhane);
+        places.add(speed);
         binding.placesRecycler.setLayoutManager(new LinearLayoutManager(this));
         PlaceAdapter placeAdapter = new PlaceAdapter(places);
         binding.placesRecycler.setAdapter(placeAdapter);

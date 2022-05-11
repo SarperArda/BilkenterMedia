@@ -13,6 +13,6 @@
         android:fontFamily="sans-serif-black"
         android:text="TextView"
         android:textSize="24sp"
-        android:layout_margin="5dp"/>
+        android:layout_margin="2dp"/>
 
 </LinearLayout>
