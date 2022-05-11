@@ -2,10 +2,13 @@ package com.thenameless.bilkenter_media.PlacePart;
 
 public class Comment {
     public String comment;
-    public String userName;
+    public float rank;
 
-    public Comment(String comment, String userName) {
+    public Comment(String comment, float rank) {
+        this.rank = rank;
         this.comment = comment;
-        this.userName = userName;
+    }
+    public float getRank() {
+        return rank;
     }
 }
