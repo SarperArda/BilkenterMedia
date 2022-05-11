@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.thenameless.bilkenter_media.R;
 import com.thenameless.bilkenter_media.databinding.ActivityPlacesBinding;
 
@@ -22,7 +23,8 @@ public class Places extends AppCompatActivity {
 
         // data
         ArrayList<Place> places = new ArrayList<Place>();
-
+        double yemekhaneEnlem = 39.8705899;
+        double yemekhaneBoylam = 32.7506622;
         Place mozart = new Place("mozart","08:00","18:45", R.drawable.mozart );
         Place fameo = new Place("fameo","08:00","18:00", R.drawable.fameo );
         Place coffee_break = new Place("coffee_break","08:00","17:30", R.drawable.coffeebreak );

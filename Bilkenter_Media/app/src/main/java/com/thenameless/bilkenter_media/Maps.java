@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -37,6 +38,7 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
     ActivityResultLauncher<String> permissionLauncher;
     LocationManager user;
     LocationListener locationListener;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         registerLaunch();
+        intent = getIntent();
     }
 
     /**
@@ -109,20 +112,11 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
         });
     }
 
-
-    //Türker will continue this method.
-
     public void markPlaces(){
 
-        ArrayList<LatLng> places = new ArrayList<>();
-        LatLng yemekhane = new LatLng(39.8705899,32.7506622);
-        places.add(yemekhane);
-        LatLng cafeIn1 = new LatLng(39.8699283,32.7505348);
-        places.add(cafeIn1);
+        LatLng place = new LatLng(intent.getDoubleExtra("enlem",0),intent.getDoubleExtra("boylam",0));
+        mMap.addMarker(new MarkerOptions().position(place));
 
-        for (int i = 0; i < places.size(); i++) {
-            mMap.addMarker(new MarkerOptions().position(places.get(i)));
-        }
     }
 
     

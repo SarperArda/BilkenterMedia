@@ -43,6 +43,8 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceHolder>
                 intent.putExtra("photo", placeArrayList.get(position).image);
                 intent.putExtra("openingTime",placeArrayList.get(position).openingTime);
                 intent.putExtra("closingTime",placeArrayList.get(position).closingTime);
+                intent.putExtra("enlem",placeArrayList.get(position).enlem);
+                intent.putExtra("boylam",placeArrayList.get(position).boylam);
                 holder.itemView.getContext().startActivity(intent);
             }
         });
