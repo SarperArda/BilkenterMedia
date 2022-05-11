@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_blog_add.xml" value="0.20677083333333332" />
         <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_blog_reading.xml" value="0.25416666666666665" />
         <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_blogs.xml" value="0.20677083333333332" />
@@ -13,9 +14,10 @@
         <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_maps.xml" value="0.20677083333333332" />
         <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_placedetails.xml" value="0.13020833333333334" />
-        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_profile.xml" value="0.20677083333333332" />
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_profile.xml" value="0.264" />
         <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_settings.xml" value="0.25416666666666665" />
         <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/commentview.xml" value="0.21197916666666666" />
         <entry key="..\:/gitRepo/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_blog.xml" value="0.2" />
         <entry key="..\:/gitRepo/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_blog_reading.xml" value="0.25416666666666665" />
         <entry key="..\:/gitRepo/BilkenterMedia/Bilkenter_Media/app/src/main/res/layout/activity_blogs.xml" value="0.25416666666666665" />

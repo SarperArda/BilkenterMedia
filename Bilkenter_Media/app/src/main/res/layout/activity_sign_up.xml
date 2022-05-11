@@ -13,7 +13,7 @@
         android:layout_marginTop="56dp"
         android:ems="10"
         android:hint="Enter Your Name"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
