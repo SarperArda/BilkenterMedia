@@ -121,9 +121,4 @@ public class SignUp extends AppCompatActivity {
             }
         });
     }
-    public void goBackToLogin(View view){
-        Intent intent = new Intent(SignUp.this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
 }

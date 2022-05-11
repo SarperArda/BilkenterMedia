@@ -189,11 +189,6 @@ public class Profile extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
     }
-    public void goToMenu(View view){
-        Intent intent = new Intent(Profile.this, Home.class);
-        startActivity(intent);
-        finish();
-    }
     public String getName(){
         return name;
     }
