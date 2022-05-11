@@ -35,18 +35,17 @@ public class CommentAdd extends AppCompatActivity {
         setContentView(view);
         Intent intent = getIntent();
         placename = intent.getStringExtra("name");
+        binding.name.setText(placename);
         mAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
     }
 
     public void saveComment(View view){
         String comment = binding.commentByUser.getText().toString();
-        float rank = binding.ratingBar.getNumStars();
         FirebaseUser userCurrent = mAuth.getCurrentUser();
         //String userName = userCurrent.getDisplayName();
         HashMap<String,Object> comments = new HashMap<>();
         comments.put("comment",comment);
-        comments.put("rank",rank);
         //comments.put("date", FieldValue.serverTimestamp());
         firebaseFirestore.collection(placename).add(comments).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override

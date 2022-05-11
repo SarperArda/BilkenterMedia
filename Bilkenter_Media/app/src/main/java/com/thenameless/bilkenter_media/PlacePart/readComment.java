@@ -42,7 +42,6 @@ public class readComment extends AppCompatActivity {
 
         // data
 
-        comments.add(new Comment("good", 5));
         getData();
         readAdapter = new CommentReadAdapter(comments);
 
@@ -62,8 +61,7 @@ public class readComment extends AppCompatActivity {
                     for (DocumentSnapshot snapshot : value.getDocuments()) {
                         Map<String, Object> data = snapshot.getData();
                         String comment = (String) data.get("comment");
-                        float rank = intent.getFloatExtra("rank",0);
-                        Comment commentAdd = new Comment(comment,rank);
+                        Comment commentAdd = new Comment(comment);
                         comments.add(commentAdd);
                     }
                     readAdapter.notifyDataSetChanged();
