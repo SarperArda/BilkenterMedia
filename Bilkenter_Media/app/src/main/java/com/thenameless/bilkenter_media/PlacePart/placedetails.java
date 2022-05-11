@@ -24,6 +24,7 @@ public class placedetails extends AppCompatActivity {
     ArrayList<Comment> comments;
     private FirebaseFirestore firebaseFirestore;
     Intent intent;
+    String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +34,7 @@ public class placedetails extends AppCompatActivity {
         intent = getIntent();
         binding.photo.setImageResource(intent.getIntExtra("photo", 0));
         binding.placename.setText(intent.getStringExtra("placename"));
+        name = intent.getStringExtra("placename");
         binding.opennigTime.setText(intent.getStringExtra("openingTime"));
         binding.closedTime.setText(intent.getStringExtra("closingTime"));
         comments = new ArrayList<Comment>();
@@ -44,12 +46,12 @@ public class placedetails extends AppCompatActivity {
     }
     public void goToComments(View view){
         Intent intent = new Intent(placedetails.this,readComment.class);
-        intent.putExtra("name",intent.getStringExtra("placename"));
+        intent.putExtra("name",name);
         startActivity(intent);
     }
     public void goToCommentAdd(View view){
         Intent intent = new Intent(placedetails.this,CommentAdd.class);
-        intent.putExtra("placename",intent.getStringExtra("placename"));
+        intent.putExtra("name",name);
         startActivity(intent);
     }
     /**

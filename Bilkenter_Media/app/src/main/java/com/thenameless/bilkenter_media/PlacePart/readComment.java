@@ -26,6 +26,7 @@ public class readComment extends AppCompatActivity {
     private ActivityReadCommentBinding binding;
     ArrayList<Comment> comments;
     CommentReadAdapter readAdapter;
+    String placename;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class readComment extends AppCompatActivity {
 
         comments = new ArrayList<Comment>();
         intent = getIntent();
+        placename = intent.getStringExtra("name");
         firebaseFirestore = FirebaseFirestore.getInstance();
 
 
@@ -50,7 +52,7 @@ public class readComment extends AppCompatActivity {
 
     }
       private void getData() {
-        firebaseFirestore.collection("mozart").addSnapshotListener(new EventListener<QuerySnapshot>() {
+        firebaseFirestore.collection(placename).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(QuerySnapshot value, FirebaseFirestoreException error) {
                 if (error != null) {

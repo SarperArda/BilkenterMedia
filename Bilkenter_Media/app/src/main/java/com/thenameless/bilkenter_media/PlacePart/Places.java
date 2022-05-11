@@ -20,7 +20,6 @@ public class Places extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-
         // data
         ArrayList<Place> places = new ArrayList<Place>();
         Place mozart = new Place("mozart","10:30","22:00", R.drawable.mozart );

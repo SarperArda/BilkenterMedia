@@ -34,7 +34,7 @@ public class CommentAdd extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
         Intent intent = getIntent();
-        placename = intent.getStringExtra("placename");
+        placename = intent.getStringExtra("name");
         mAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
     }
@@ -47,9 +47,8 @@ public class CommentAdd extends AppCompatActivity {
         HashMap<String,Object> comments = new HashMap<>();
         comments.put("comment",comment);
         comments.put("rank",rank);
-        comments.put("userName",userName);
         //comments.put("date", FieldValue.serverTimestamp());
-        firebaseFirestore.collection("mozart").add(comments).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        firebaseFirestore.collection(placename).add(comments).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 Intent intent = new Intent(CommentAdd.this, readComment.class);
