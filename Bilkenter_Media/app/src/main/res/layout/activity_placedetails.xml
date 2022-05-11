@@ -22,36 +22,24 @@
         android:id="@+id/placename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="18dp"
         android:text="TextView"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/closedTime"
-        app:layout_constraintEnd_toStartOf="@+id/closedTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/photo" />
 
     <TextView
         android:id="@+id/opennigTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="59dp"
         android:text="a"
-        android:textSize="24sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/commentAdd"
-        app:layout_constraintEnd_toStartOf="@+id/closedTime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/photo" />
-
-    <TextView
-        android:id="@+id/closedTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="b"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/opennigTime"
-        app:layout_constraintTop_toBottomOf="@+id/placename" />
 
     <Button
         android:id="@+id/comments"
@@ -82,11 +70,22 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
         android:layout_marginEnd="9dp"
         android:onClick="goToMap"
-        android:text="Button"
+        android:text="Location"
         app:layout_constraintBaseline_toBaselineOf="@+id/commentAdd"
         app:layout_constraintEnd_toStartOf="@+id/comments"
         app:layout_constraintStart_toEndOf="@+id/commentAdd" />
+
+    <TextView
+        android:id="@+id/closedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/opennigTime"
+        app:layout_constraintTop_toBottomOf="@+id/photo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

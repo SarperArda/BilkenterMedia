@@ -41,8 +41,8 @@ public class placedetails extends AppCompatActivity {
         name = intent.getStringExtra("placename");
         enlem = intent.getDoubleExtra("enlem",0);
         boylam = intent.getDoubleExtra("boylam",0);
-        binding.opennigTime.setText(intent.getStringExtra("openingTime"));
-        binding.closedTime.setText(intent.getStringExtra("closingTime"));
+        binding.opennigTime.setText("Opening Time: " + intent.getStringExtra("openingTime"));
+        binding.closedTime.setText("Closing Time: " + intent.getStringExtra("closingTime"));
 
 
     }
