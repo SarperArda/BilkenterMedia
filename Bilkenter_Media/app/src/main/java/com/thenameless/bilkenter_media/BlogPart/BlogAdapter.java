@@ -37,7 +37,6 @@ public class BlogAdapter  extends RecyclerView.Adapter<BlogAdapter.BlogHolder>{
                 Intent intent = new Intent(holder.itemView.getContext(), blogReadingActivity.class );
                 intent.putExtra("blog",blogArrayList.get(position).blog);
                 intent.putExtra("blogName",blogArrayList.get(position).blogName);
-                intent.putExtra("userName",blogArrayList.get(position).user);
                 holder.itemView.getContext().startActivity(intent);
             }
         });

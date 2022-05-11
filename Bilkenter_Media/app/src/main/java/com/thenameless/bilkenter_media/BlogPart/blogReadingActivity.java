@@ -30,10 +30,8 @@ public class blogReadingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         intent = getIntent();
         binding = ActivityBlogReadingBinding.inflate(getLayoutInflater());
-        binding.username.setText(intent.getStringExtra("userName"));
         binding.userBlog.setText(intent.getStringExtra("blogName"));
         binding.blog.setText(intent.getStringExtra("blog"));
-        //binding.blog.setText("asdfdfsdfv");
         View view = binding.getRoot();
         setContentView(view);
     }
