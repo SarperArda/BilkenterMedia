@@ -91,6 +91,7 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
         }else{
             user.requestLocationUpdates(LocationManager.GPS_PROVIDER,10000,50,locationListener);
         }
+        mMap.setMyLocationEnabled(true);
         markPlaces();
 
     }
@@ -110,6 +111,7 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
                 }
             }
         });
+
     }
 
     public void markPlaces(){
