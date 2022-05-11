@@ -33,11 +33,11 @@ public class Places extends AppCompatActivity {
         double coffeB = 32.7494944;
         double fameoE = 39.868446;
         double fameoB = 32.763683;
-        Place mozart = new Place("mozart","08:00","18:45", R.drawable.mozart ,mozartE,mozartB);
-        Place fameo = new Place("fameo","08:00","18:00", R.drawable.fameo,fameoE,fameoB );
-        Place coffee_break = new Place("coffee_break","08:00","17:30", R.drawable.coffeebreak,coffeE,coffeB );
-        Place yemekhane = new Place("yemekhane","08:00","20:00", R.drawable.yemekhane,yemekhaneEnlem,yemekhaneBoylam );
-        Place speed = new Place("speed","07:30","21:30", R.drawable.speed,speedE,speedB );
+        Place mozart = new Place("MOZART","08:00","18:45", R.drawable.mozart ,mozartE,mozartB);
+        Place fameo = new Place("FAMEO","08:00","18:00", R.drawable.fameo,fameoE,fameoB );
+        Place coffee_break = new Place("COFFEE BREAK","08:00","17:30", R.drawable.coffeebreak,coffeE,coffeB );
+        Place yemekhane = new Place("CAFETERIA","08:00","20:00", R.drawable.yemekhane,yemekhaneEnlem,yemekhaneBoylam );
+        Place speed = new Place("SPEED","07:30","21:30", R.drawable.speed,speedE,speedB );
         places.add(coffee_break);
         places.add(fameo);
         places.add(mozart);
