@@ -43,7 +43,7 @@ public class CommentAdd extends AppCompatActivity {
         String comment = binding.commentByUser.getText().toString();
         float rank = binding.ratingBar.getNumStars();
         FirebaseUser userCurrent = mAuth.getCurrentUser();
-        String userName = userCurrent.getDisplayName();
+        //String userName = userCurrent.getDisplayName();
         HashMap<String,Object> comments = new HashMap<>();
         comments.put("comment",comment);
         comments.put("rank",rank);

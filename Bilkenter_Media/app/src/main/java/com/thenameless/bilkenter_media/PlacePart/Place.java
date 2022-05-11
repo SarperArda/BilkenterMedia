@@ -15,22 +15,5 @@ public class Place implements Serializable {
         this.closingTime = closingTime;
         this.image = image;
     }
-    /**
-    public double getAverageRank(){
-        int sum = 0;
-        for(Rank rank: ranks ){
-            sum = sum + rank.getRank();
-        }
-        return (sum/ranks.size());
-    }
 
-
-    public ArrayList<Rank> getRanks() {
-        return ranks;
-    }
-
-    public ArrayList<Comment> getComments() {
-        return comments;
-    }
-     */
 }

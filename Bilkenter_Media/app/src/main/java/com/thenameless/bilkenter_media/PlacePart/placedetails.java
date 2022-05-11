@@ -31,17 +31,19 @@ public class placedetails extends AppCompatActivity {
         binding = ActivityPlacedetailsBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        comments = new ArrayList<Comment>();
+        firebaseFirestore = FirebaseFirestore.getInstance();
         intent = getIntent();
         binding.photo.setImageResource(intent.getIntExtra("photo", 0));
         binding.placename.setText(intent.getStringExtra("placename"));
         name = intent.getStringExtra("placename");
         binding.opennigTime.setText(intent.getStringExtra("openingTime"));
         binding.closedTime.setText(intent.getStringExtra("closingTime"));
-        comments = new ArrayList<Comment>();
-
-        firebaseFirestore = FirebaseFirestore.getInstance();
-        //getData();
-        //binding.rankPlace.setNumStars((int)getRankAverage(comments));
+        /**
+        getData();
+        float rank = (float) getRankAverage(comments);
+        binding.rank.setText(""+ rank+ "");
+         */
 
     }
     public void goToComments(View view){
@@ -54,9 +56,9 @@ public class placedetails extends AppCompatActivity {
         intent.putExtra("name",name);
         startActivity(intent);
     }
-    /**
+
     private void getData() {
-        firebaseFirestore.collection("mozart").addSnapshotListener(new EventListener<QuerySnapshot>() {
+        firebaseFirestore.collection(name).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(QuerySnapshot value, FirebaseFirestoreException error) {
                 if (error != null) {
@@ -66,23 +68,20 @@ public class placedetails extends AppCompatActivity {
                     for (DocumentSnapshot snapshot : value.getDocuments()) {
                         Map<String, Object> data = snapshot.getData();
                         String comment = (String) data.get("comment");
-                        float rank = intent.getFloatExtra("rank",0);
+                        float rank = (float) data.get("rank");
                         Comment commentAdd = new Comment(comment,rank);
                         comments.add(commentAdd);
                     }
-                    //readAdapter.notifyDataSetChanged();
                 }
             }
         });
-
     }
-     */
 
     private float getRankAverage(ArrayList<Comment> arr){
         float sum = 0;
         for(Comment rank : arr) {
-            sum = sum + rank.getRank();
+            sum = sum + rank.rank;
         }
-        return sum;
+        return sum / arr.size();
         }
     }

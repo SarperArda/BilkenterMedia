@@ -9,9 +9,11 @@
     <ImageView
         android:id="@+id/photo"
         android:layout_width="wrap_content"
-        android:layout_height="350dp"
+        android:layout_height="0dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
+        android:layout_marginBottom="78dp"
+        app:layout_constraintBottom_toTopOf="@+id/closedTime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bilkentlogo" />
@@ -30,19 +32,25 @@
         android:id="@+id/opennigTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="9dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/placename"
+        android:text="a"
+        app:layout_constraintEnd_toStartOf="@+id/closedTime"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/placename" />
 
     <TextView
         android:id="@+id/closedTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="433dp" />
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="17dp"
+        android:text="b"
+        app:layout_constraintBottom_toTopOf="@+id/rank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/opennigTime"
+        app:layout_constraintTop_toBottomOf="@+id/photo" />
 
     <Button
         android:id="@+id/comments"
@@ -67,5 +75,16 @@
         android:text="Add Comment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="115dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/opennigTime"
+        app:layout_constraintTop_toBottomOf="@+id/closedTime" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
